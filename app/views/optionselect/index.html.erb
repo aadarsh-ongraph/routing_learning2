@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Select Multiple Options Example</title>
+
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  
+  <%= csrf_meta_tags %>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <h1>Select multiple options:</h1>
+    
+    <%= form_tag '/options/submit' do %>
+      <%= select_tag :options, options_for_select(['Apple', 'Kiwi', 'Banana', 'Grapes', 
+      'Orange'], multiple: true) %>
+      <%= submit_tag 'Submit' %>
+    <% end %>
+
+  </div>
+
+</body>
+
+</html>
